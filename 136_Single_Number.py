@@ -44,17 +44,19 @@ Output: 1
 
 
 def singleNumber(nums):
-    dict1 = {}
+    # dict1 = {}
+    # for i in nums:
+    #     x = nums.count(i)
+    #     dict1.update({i:x})
+
+    # for k in dict1:
+    #     if dict1.get(k) == 1:
+    #         return k
+
+    rslt = 0
     for i in nums:
-        x = nums.count(i)
-        dict1.update({i:x})
-
-    for k in dict1:
-        if dict1.get(k) == 1:
-            return k
-
-
-
+        rslt = rslt^i    
+    return rslt
 
 print(singleNumber(nums))      
 
